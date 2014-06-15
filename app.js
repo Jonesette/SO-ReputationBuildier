@@ -132,7 +132,7 @@ var getInspired = function(topic) {
 		type: "GET"
 		})
 	.done(function(result){
-		var searchResults = showSearchResults(request.tagged, result.items.length);
+		var searchResults = showSearchResults(topic, result.items.length);
 		$('.search-results').html(searchResults);
 
 		$.each(result.items, function(i, item) {
